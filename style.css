@@ -1,0 +1,805 @@
+@import url("https://fonts.googleapis.com/css2?family=Amarna:ital,wght@0,100..700;1,100..700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fuzzy+Bubbles:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 300ms ease;
+}
+
+img {
+  pointer-events: none;
+  width: 100vw;
+  border: 1px solid black;
+}
+
+p {
+  inline-size: 100%;
+  text-align: center;
+  padding: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+a:hover {
+  cursor: pointer;
+  animation: registration__btn 7s ease;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #c36;
+}
+
+button {
+  font-family: "Comic Neue";
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/*
+
+HAMBURGER MENU
+
+*/
+
+.ham__menu {
+  inline-size: 50px;
+  block-size: 50px;
+  background-color: white;
+  border: 4px solid rgb(51, 50, 50);
+  border-radius: 5px;
+  margin: 4px;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+}
+.bars {
+  inline-size: 60%;
+  block-size: 4px;
+  background-color: black;
+  border-radius: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 300ms ease;
+}
+
+.bars:nth-child(1) {
+  top: 25%;
+}
+
+.bars:nth-child(3) {
+  top: 75%;
+}
+
+.ham__menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham__menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham__menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hidden__menu {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  block-size: 100vh;
+  inline-size: 100%;
+  max-inline-size: 450px;
+  position: fixed;
+  top: 0%;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.ham__links {
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  gap: 2rem;
+}
+
+.hidden__menu.active {
+  right: 0;
+  z-index: 100;
+}
+
+/*
+NAV__LINKS
+*/
+
+.nav__links--container {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.links__container {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+
+  background-color: white;
+  opacity: 5;
+  inline-size: 100%;
+}
+
+.links {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 2;
+  font-weight: 700;
+  padding-inline: 24px;
+}
+
+.link {
+  text-decoration: none;
+  padding-inline: 12px;
+  color: black;
+  font-size: 16px;
+}
+
+.logo__wrapper {
+  padding-inline-start: 24px;
+}
+
+.logo {
+  inline-size: 50px;
+  border-radius: 50rem;
+}
+
+/*
+HOMEPAGE
+*/
+
+body {
+  max-width: 95vw;
+  margin: 0 auto
+}
+
+.homepage__landing--page {
+  block-size: 100vh;
+  inline-size: 100%;
+  background-image: url(./pics/landing__page.JPG);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.homepage__landing--content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.homepage__landing--title {
+  margin-top: 75px;
+  padding-inline-start: 24px;
+  padding-block-start: 24px;
+  color: rgba(255, 255, 255, 0.977);
+  font-family: "Comic Neue", sans-serif;
+  font-size: 42px;
+}
+
+.landing__text--para {
+  color: white;
+  margin-top: 50px;
+  display: flex;
+  width: 250px;
+  height: 200px;
+  line-height: 2;
+  justify-content: center;
+  margin-left: 200px;
+  left: 550px;
+  padding: 24px;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.movie {
+  padding-top: 24px;
+  width: 100%;
+}
+
+.movie__credit{
+  padding: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.homepage__divider {
+  block-size: 10%;
+  background-color: lightgray;
+  inline-size: 100%;
+}
+
+.homepage__footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.sign__up--btn {
+  padding: 0 4rem;
+  margin-block-start: 12px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.email__input {
+  padding: 0.75rem 9rem;
+  border: 3px solid rgb(25, 129, 163);
+}
+
+.email {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input__subscribe--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.email__question--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  margin-bottom: 48px;
+}
+
+.footer__email {
+  padding: 2rem;
+  width: 50%;
+}
+
+.footer__para {
+  font-size: 24px;
+}
+
+.input__email {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__footer {
+  margin: 0 32px 0 40px;
+  padding: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/*
+ABOUT US
+*/
+
+#about__us {
+  block-size: 100vh;
+}
+
+.about__us--img {
+  width: 60vw;
+}
+
+.about__Us--Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about__us--title {
+  background-image: radial-gradient(rgb(8, 97, 156), rgb(59, 20, 141));
+  color: transparent;
+  background-clip: text;
+  text-shadow: 1px 1px 2px rgba(25, 98, 232, 0.386);
+  margin: 24px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__us--para {
+  inline-size: 80%;
+  text-align: center;
+  color: black;
+  padding: 24px 48px;
+  line-height: 1.5;
+}
+
+/*
+
+SEASTONE FAMILY GATHERING
+
+*/
+
+.seastone__family--container,
+.spring__clam--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.seastone__family--gathering-title{
+   background-image: radial-gradient(rgb(8, 97, 156), rgb(59, 20, 141));
+  color: transparent;
+  background-clip: text;
+  text-shadow: 1px 1px 2px rgba(25, 98, 232, 0.386);
+  margin: 24px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seastone__family__gathering--img {
+  width: 60vw;
+}
+
+.seastone__family__gathering--body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  block-size: 100vh;
+}
+
+.seastone__family__gathering--img-wrapper {
+  margin: 24px;
+  /*  animation: carousel 90s ease infinite alternate;*/
+}
+
+/*
+@keyframes carousel{
+    0%{
+        background-image: url(./pics/Beards_Hollow_Beach_Kids.jpg);
+    }
+    10%{
+        background-image: url(./pics/bay__sunset.jpg);
+    }
+    20%{
+        background-image: url(./pics/alana__seaweed__workshop.jpg);
+    }
+    30%{
+        background-image: url(./pics/first__homepage--option.jpg);
+    }
+    40%{
+        background-image: url(./pics/razor__claming__spring__camp.jpg);
+    }
+    50%{
+        background-image: url(./pics/kids_in_line.jpg);
+    }
+    60%{
+        background-image: url(./pics/person__in__chair__sunset.jpg);
+    }
+    70%{
+        background-image: url(./pics/seastone__gathering--lone-sunset--pic.jpg);
+    }
+    80%{
+        background-image: url(./pics/seastone__clam--toast.jpg);
+    }
+    90%{
+        background-image: url(./pics/bayside__lounge__evening.jpg);
+    }
+    99%{
+        background-image: url(./pics/Cailyn__arlo__oysters.jpg);
+    }
+}*/
+
+.seastone__family__gathering--para {
+  color: black;
+}
+
+/*
+
+SPRING CLAM CAMP
+
+*/
+
+.clam__camp--banner{
+  background-image: radial-gradient(rgb(8, 97, 156), rgb(59, 20, 141));
+  color: transparent;
+  background-clip: text;
+  text-shadow: 1px 1px 2px rgba(25, 98, 232, 0.386);
+  margin: 24px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.spring__clam--img {
+  block-size: auto;
+  inline-size: 60vw;
+}
+
+/*
+
+CHINOOK PAGE
+
+*/
+
+.chinook__para {
+  font-size: 24px;
+  color: black;
+}
+
+.chinook__para--title {
+  font-size: 32px;
+  color: #c36;
+  font-weight: bolder;
+}
+
+.chinook__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 24px;
+  inline-size: 100vw;
+  padding: 32px;
+  text-decoration: underline rgb(185, 18, 74);
+  text-underline-offset: 8px;
+}
+
+.chinook__homepage--img {
+  inline-size: 100vw;
+}
+
+.chinook__link {
+  justify-content: space-around;
+}
+
+.chinook__link:hover {
+  font-size: 28px;
+  transition: all 300ms ease;
+}
+
+.chinook__link:hover a {
+  color: rgb(175, 44, 87);
+}
+
+.chinnook__para--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chinook__para {
+  inline-size: 50vw;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+  padding-block: 24px;
+}
+
+.chinook__photo--credit {
+  text-align: end;
+  padding: 0px 24px;
+  width: 100vw;
+}
+
+/*
+REGISTRATION
+*/
+
+.enroll__title{
+   background-image: radial-gradient(rgb(8, 97, 156), rgb(59, 20, 141));
+  color: transparent;
+  background-clip: text;
+  text-shadow: 1px 1px 2px rgba(25, 98, 232, 0.386);
+  margin: 24px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.registration {
+  background-image: url(pics/seastone__gathering--lone-sunset--pic.jpg);
+  block-size: 84vh;
+  inline-size: 100vw;
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration__link {
+  font-size: 25px;
+  text-decoration: none;
+  color: azure;
+  font-weight: 900;
+  text-shadow: 8px 8px 16px black;
+  margin-inline-end: 200px;
+  margin-block-end: 200px;
+}
+
+.registration__link:hover::after {
+  right: 1;
+}
+
+.registration__link:hover {
+  animation: registration__btn 5s infinite;
+  transition: all 700 ease;
+}
+
+@keyframes registration__btn {
+  0% {
+    color: red;
+    text-shadow:
+      3,
+      3,
+      5px gold;
+  }
+  20% {
+    color: orange;
+    text-shadow:
+      3,
+      3,
+      5px gold;
+  }
+  40% {
+    color: yellow;
+    text-shadow:
+      3,
+      3,
+      5px gold;
+  }
+  60% {
+    color: green;
+    text-shadow:
+      3,
+      3,
+      5px gold;
+  }
+  80% {
+    color: blue;
+    text-shadow:
+      3,
+      3,
+      5px gold;
+  }
+
+  100% {
+    color: blueviolet;
+    text-shadow:
+      3,
+      3,
+      5px gold;
+  }
+}
+
+.registration__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.registration__info--container {
+  display: flex;
+  margin: 12px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  inline-size: 90vw;
+  margin: 0 auto;
+  inline-size: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.registration__text,
+.about__us--para,
+.seastone__family__gathering--para,
+.spring__clam--para {
+  inline-size: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 24px;
+  line-height: 2;
+  color: black;
+}
+
+.enroll__para {
+  font-weight: 400;
+  width: 100vw;
+}
+
+/*
+
+ENROLMENT
+
+*/
+
+.coast__crest--logo {
+  width: 50vw;
+}
+
+.enrolment__footer--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-image: url(./pics/wave__background--nav.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 3px solid black;
+  width: 100%;
+}
+
+.enrolment__btn {
+  border: 2px outset black;
+  padding: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5%;
+  background: radial-gradient(white, rgb(139, 138, 138));
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  letter-spacing: 1;
+  margin: 8px 0px;
+}
+
+.enrolment__btn:hover {
+  box-shadow:
+    0 0 10px #ede32c,
+    0 0 20px #ede32cb8,
+    0 0 30px #ede32c7a;
+}
+
+@media (max-width: 800px) {
+  p {
+    width: 70vw;
+  }
+
+  .ham__menu {
+    display: flex;
+    position: relative;
+    top: auto;
+    right: 36px;
+  }
+
+  .links,
+  .links--homepage {
+    display: none;
+  }
+
+  .ham__links {
+    display: flex;
+  }
+
+  .homepage__footer {
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home__page--video {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 24px;
+  }
+
+  .landing__text--para {
+    width: 200px;
+    margin: 62px 12px 0 0;
+    font-size: 18px;
+    justify-content: space-around;
+  }
+
+  .footer__para {
+    padding: 0;
+  }
+
+  .input__email {
+    margin-right: 24px;
+  }
+  .email__input {
+    padding: 0 50px;
+    padding: 0.75rem 9rem;
+  }
+
+  .footer__email {
+    margin-inline-start: 12px;
+    text-align: center;
+  }
+
+  .about__us--img,
+  .spring__clam--img,
+  .seastone__family__gathering--img {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .homepage__landing--title {
+    font-size: 32px;
+  }
+
+  .chinook__links {
+    font-size: 18px;
+  }
+
+  .chinook__link:hover {
+    font-size: 20px;
+    transition: all 300ms ease;
+  }
+
+  .movie {
+    width: 90%;
+  }
+}
+
+/*<h2 class="footer__email">Join our newsletter to recieve updates.</h2>*/
+
+/*
+              <div class="input__subscribe--container">
+                <form class="emailForm" action="https://formspree.io/f/mrebnbog" method="post">
+                <div class="input__email">
+                 <label class="footer__para">Sign up to be the first to hear when we open registration, work trade opportunities, or other important updates.</label>
+                <input 
+                name="emailInput"
+                class="email__input" type="email" placeholder="Email" required>
+                <button class="sign__up--btn" type="submit" >Sign Up</button>
+                </div>
+                </form>
+              </div>*/
