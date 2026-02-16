@@ -183,7 +183,7 @@ body {
 
 .homepage__landing--page {
   block-size: 100vh;
-  inline-size: 100%;
+  inline-size: 100vw;
   background-image: url(./pics/landing__page.JPG);
   background-position: center;
   background-size: cover;
@@ -217,6 +217,13 @@ body {
   padding: 24px;
   font-size: 24px;
   text-shadow: 2px 2px 5px black;
+}
+
+.movie__container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .movie {
@@ -794,6 +801,7 @@ ENROLMENT
   justify-content: end;
   }
 }
+
 
 
 
