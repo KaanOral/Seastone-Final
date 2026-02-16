@@ -785,21 +785,8 @@ ENROLMENT
   }
 
   .movie {
-    width: 90%;
+    width: 100%;
   }
 }
 
-/*<h2 class="footer__email">Join our newsletter to recieve updates.</h2>*/
 
-/*
-              <div class="input__subscribe--container">
-                <form class="emailForm" action="https://formspree.io/f/mrebnbog" method="post">
-                <div class="input__email">
-                 <label class="footer__para">Sign up to be the first to hear when we open registration, work trade opportunities, or other important updates.</label>
-                <input 
-                name="emailInput"
-                class="email__input" type="email" placeholder="Email" required>
-                <button class="sign__up--btn" type="submit" >Sign Up</button>
-                </div>
-                </form>
-              </div>*/
