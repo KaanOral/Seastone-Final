@@ -798,9 +798,11 @@ ENROLMENT
    .movie__credit{
      padding: 0;
   display: flex;
-  justify-content: end;
+     align-items: center;
+  justify-content: center;
   }
 }
+
 
 
 
